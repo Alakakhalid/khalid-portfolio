@@ -1,0 +1,253 @@
+/* ===== About Section ===== */
+.about {
+  --about-primary: #6c63ff;
+  --about-primary-dark: #574fd6;
+  --about-bg: #0f1020;
+  --about-card: #181a30;
+  --about-text: #c9cbe0;
+  --about-heading: #ffffff;
+  --about-border: rgba(255, 255, 255, 0.08);
+
+  padding: 100px 20px;
+  background: var(--about-bg);
+  color: var(--about-text);
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ----- Heading ----- */
+.about-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--about-primary);
+  margin-bottom: 10px;
+}
+
+.about-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--about-heading);
+  margin: 0;
+}
+
+/* ----- Layout ----- */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* ----- Text ----- */
+.about-text h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  line-height: 1.3;
+  color: var(--about-heading);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* ----- Buttons ----- */
+.about-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--about-primary);
+  color: #fff;
+  border: 2px solid var(--about-primary);
+}
+
+.btn-primary:hover {
+  background: var(--about-primary-dark);
+  border-color: var(--about-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--about-primary);
+  border: 2px solid var(--about-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--about-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 3px solid rgba(108, 99, 255, 0.5);
+  outline-offset: 3px;
+}
+
+/* ----- Highlights ----- */
+.about-highlights {
+  display: grid;
+  gap: 20px;
+}
+
+.highlight {
+  background: var(--about-card);
+  border: 1px solid var(--about-border);
+  border-left: 4px solid var(--about-primary);
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.highlight h4 {
+  font-size: 2rem;
+  margin: 0 0 4px;
+  color: var(--about-heading);
+}
+
+.highlight p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--about-text);
+}
+
+/* ===== Responsive ===== */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .about {
+    padding: 85px 6%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .highlight {
+    padding: 20px 16px;
+  }
+
+  .highlight h4 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .about {
+    padding: 70px 6%;
+  }
+
+  .about-heading {
+    margin-bottom: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .about-heading h2 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .highlight {
+    padding: 22px;
+  }
+
+  .highlight h4 {
+    font-size: 1.8rem;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- Very Small Screens ---------- */
+@media (max-width: 380px) {
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .highlight {
+    padding: 18px;
+  }
+
+  .highlight h4 {
+    font-size: 1.6rem;
+  }
+}

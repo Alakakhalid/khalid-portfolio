@@ -1,0 +1,276 @@
+/* ===== Projects Section ===== */
+.projects {
+  --projects-primary: #6c63ff;       /* same brand color as About and Skills */
+  --projects-primary-dark: #574fd6;
+  --projects-bg: #0f1020;
+  --projects-card: #181a30;
+  --projects-text: #c9cbe0;
+  --projects-heading: #ffffff;
+  --projects-border: rgba(255, 255, 255, 0.08);
+  --projects-chip: rgba(255, 255, 255, 0.05);
+
+  padding: 100px 20px;
+  background: var(--projects-bg);
+  color: var(--projects-text);
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ----- Heading ----- */
+.projects-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+
+.projects-heading .section-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--projects-primary);
+  margin: 0 0 10px;
+}
+
+.projects-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--projects-heading);
+  margin: 0 0 15px;
+}
+
+.projects-heading > p:last-child {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* ----- Grid ----- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 30px;
+}
+
+/* ----- Card ----- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--projects-card);
+  border: 1px solid var(--projects-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+.project-image {
+  aspect-ratio: 16 / 9;
+  background: var(--projects-chip);
+  overflow: hidden;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.04);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px;
+}
+
+.project-category {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: var(--projects-primary);
+  background: rgba(108, 99, 255, 0.12);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  margin-bottom: 14px;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  color: var(--projects-heading);
+  margin: 0 0 12px;
+}
+
+.project-description {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0 0 22px;
+}
+
+/* ----- Features ----- */
+.project-features h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--projects-heading);
+  margin: 0 0 12px;
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.project-features li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 9px;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.project-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--projects-primary);
+  font-weight: 700;
+}
+
+/* ----- Technologies ----- */
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.project-technologies span {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: var(--projects-chip);
+  border: 1px solid var(--projects-border);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-technologies span:hover {
+  border-color: var(--projects-primary);
+  color: var(--projects-heading);
+}
+
+/* ----- Links ----- */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto; /* keeps buttons at the bottom so both cards align */
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-btn::after {
+  content: "↗";
+  font-size: 0.95em;
+  transition: transform 0.2s ease;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+}
+
+.project-btn:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.project-btn-primary {
+  background: var(--projects-primary);
+  border: 2px solid var(--projects-primary);
+  color: #fff;
+}
+
+.project-btn-primary:hover {
+  background: var(--projects-primary-dark);
+  border-color: var(--projects-primary-dark);
+}
+
+.project-btn-secondary {
+  background: transparent;
+  border: 2px solid var(--projects-primary);
+  color: var(--projects-primary);
+}
+
+.project-btn-secondary:hover {
+  background: var(--projects-primary);
+  color: #fff;
+}
+
+.project-btn:focus-visible {
+  outline: 3px solid rgba(108, 99, 255, 0.5);
+  outline-offset: 3px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .projects {
+    padding: 70px 20px;
+  }
+
+  .projects-heading {
+    margin-bottom: 40px;
+  }
+
+  .project-content {
+    padding: 22px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-btn {
+    justify-content: center;
+  }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-image img,
+  .project-btn,
+  .project-btn::after {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .project-card:hover .project-image img,
+  .project-btn:hover {
+    transform: none;
+  }
+}
