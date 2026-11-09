@@ -61,8 +61,8 @@ const Navbar = () => {
         </li>
 
         <li>
-          <a href="#service" onClick={closeMenu}>
-            Services
+          <a href="#skills" onClick={closeMenu}>
+            Skills
           </a>
         </li>
 
