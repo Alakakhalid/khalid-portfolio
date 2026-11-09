@@ -71,7 +71,7 @@ const projects = [
       "HTML",
       "CSS",
     ],
-    image: "/public/travel-preview.JPG",
+    image: "/travel-preview.JPG",
     links: [
       {
         label: "GitHub Repository",
