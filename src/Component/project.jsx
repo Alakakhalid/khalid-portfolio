@@ -7,7 +7,7 @@ const projects = [
     name: "EventHub",
     category: "Full-Stack Web Application",
     description:
-      "A web-based conference and event management platform that allows users to discover events, register, make ticket payments, and manage their bookings. Organizers can create and manage events through a dedicated dashboard.",
+      "An event management platform for discovering events, booking tickets, making payments, and managing events.",
     features: [
       "User and organizer authentication with OTP email verification",
       "Event creation, management, and search",
@@ -36,13 +36,8 @@ const projects = [
         style: "primary",
       },
       {
-        label: "Frontend Code",
+        label: "GitHub Repository",
         url: "https://github.com/Alakakhalid/Uniosun-Event-System-3080-EentHub-",
-        style: "secondary",
-      },
-      {
-        label: "Backend Code",
-        url: "https://github.com/Alakakhalid/Event-Hub-backend-",
         style: "secondary",
       },
     ],
@@ -52,7 +47,7 @@ const projects = [
     name: "Travel Booking System",
     category: "Web Application",
     description:
-      "A server-rendered travel website for exploring destinations, searching hotels and managing bookings. Built with Express and EJS, with a PostgreSQL database for users, bookings and reviews.",
+      "A travel booking website for exploring destinations, searching hotels, and managing bookings.",
     features: [
       "Sign up and login with hashed passwords and PostgreSQL-backed sessions",
       "Hotel search powered by the Amadeus API and Unsplash destination photos",
